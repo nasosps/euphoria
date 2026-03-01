@@ -283,12 +283,12 @@
                         card.rel = "noopener";
 
                         // Decide if we should show an image or a safe fallback
-                        const imgSrc = offer.image && offer.image !== "" ? offer.image : 'logo.png';
+                        const imgSrc = offer.image && offer.image !== "" ? offer.image : 'logo.webp';
 
                         // Build the card inner HTML dynamically
                         card.innerHTML = `
                             <div class="offer-img-wrapper">
-                                <img src="${imgSrc}" alt="${offer.title}" class="offer-img" onerror="this.src='logo.png'">
+                                <img src="${imgSrc}" alt="${offer.title}" class="offer-img" onerror="this.src='logo.webp'">
                                 ${offer.badge ? `<span class="offer-badge">${offer.badge}</span>` : ''}
                             </div>
                             <div class="offer-content">
